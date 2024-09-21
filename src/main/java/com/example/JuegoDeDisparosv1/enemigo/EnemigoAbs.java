@@ -18,6 +18,7 @@ public abstract class EnemigoAbs extends Rectangle {
     protected static double dificultad = 0;
     private static final double MAX_DIFICULTAD = 2.0;
 
+
     public EnemigoAbs(double posX, double posY, double tamX, double tamY,
                       double velocidad, int vida,int puntuacion){
         super(posX, posY, tamX, tamY);
@@ -32,6 +33,10 @@ public abstract class EnemigoAbs extends Rectangle {
         }
 
 
+    }
+
+    public static void reiniciar() {
+        dificultad = 0;
     }
 
     protected abstract void bajar();

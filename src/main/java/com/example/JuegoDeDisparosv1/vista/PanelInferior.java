@@ -1,7 +1,7 @@
 package com.example.JuegoDeDisparosv1.vista;
 
 import com.example.JuegoDeDisparosv1.utiles.ContadorTiempo;
-import com.example.JuegoDeDisparosv1.utiles.Puntuacion;
+import com.example.JuegoDeDisparosv1.utiles.ETPuntuacion;
 import com.example.JuegoDeDisparosv1.utiles.Vida;
 import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;
@@ -10,16 +10,15 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 
 import java.util.ArrayList;
-import java.util.Stack;
 
 public class PanelInferior extends StackPane {
 
-    private Puntuacion puntos;
+    private ETPuntuacion puntos;
     private ArrayList<Vida> vidas;
     private static PanelInferior panelInferior;
     private HBox hbox;
     public PanelInferior(){
-        puntos = Puntuacion.getPuntuacion();
+        puntos = ETPuntuacion.getPuntuacion();
         vidas = Vida.getVidas();
         hbox = new HBox(10);
         setStyle("-fx-background-color: GRAY");

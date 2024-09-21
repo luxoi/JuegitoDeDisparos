@@ -1,14 +1,17 @@
 package com.example.JuegoDeDisparosv1.enemigo;
 
 import javafx.animation.AnimationTimer;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 
 public class EnemigoJefe extends EnemigoAbs{
 
     public EnemigoJefe(){
-        super(150, -100, 200, 100,
+        super(150, -150, 210, 150,
                 (Math.random()*2)+dificultad, 10, 1000);
-        setFill(Color.PURPLE);
+        Image image = new Image("file:src/recursos/jefe.png");
+        setFill(new ImagePattern(image));
         bajar();
     }
 

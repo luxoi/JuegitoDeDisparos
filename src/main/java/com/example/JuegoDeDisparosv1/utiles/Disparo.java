@@ -20,7 +20,7 @@ public class Disparo extends Rectangle {
         nDisparos++;
         panelJuego = PanelJuego.getPanelJuego();
         enPantalla = true;
-        setFill(Color.RED);
+        setFill(Color.WHITE);
         subir();
     }
     private void subir(){
@@ -42,8 +42,8 @@ public class Disparo extends Rectangle {
                             e.getAnimador().stop();
                             panelJuego.getChildren().remove(e);
                             enemigos.remove(e);
-                            Puntuacion.subirPuntuacion(e.getPuntuacion());
-                            Puntuacion.aumentarMultiplicador(true);
+                            ETPuntuacion.subirPuntuacion(e.getPuntuacion());
+                            ETPuntuacion.aumentarMultiplicador(true);
                         }
                     }
                 }

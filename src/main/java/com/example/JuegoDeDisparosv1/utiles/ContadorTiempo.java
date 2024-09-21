@@ -48,4 +48,10 @@ public class ContadorTiempo{
     public static int getSegundos(){
         return segundos;
     }
+
+    public static void reiniciar() {
+        tl.stop();
+        segundos = 0;
+        actEtiqueta();
+    }
 }

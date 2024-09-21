@@ -4,7 +4,9 @@ import com.example.JuegoDeDisparosv1.utiles.Disparo;
 import com.example.JuegoDeDisparosv1.vista.PanelJuego;
 import javafx.animation.AnimationTimer;
 import javafx.geometry.Bounds;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.paint.Color;
 
@@ -13,9 +15,11 @@ public class PJ extends Rectangle {
     private boolean moviendoIzquierda, moviendoDerecha;
     private static Bounds posicion;
     private static int nDisparos = 3;
+
     public PJ(){
-        super(250, 480, 50, 50);;
-        setFill(Color.CORNFLOWERBLUE);
+        super(250, 470, 60, 70);;
+        Image image = new Image("file:src/recursos/vaca.png");
+        setFill(new ImagePattern(image));
         ponerEnAccion();
         panelJuego = PanelJuego.getPanelJuego();
         animarPJ();
