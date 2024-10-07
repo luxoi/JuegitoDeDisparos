@@ -8,12 +8,13 @@ public class ETPuntuacion extends Text {
     private static int puntuacion = 0;
     public static double multiplicador = 1;
     private static ETPuntuacion p = new ETPuntuacion();
-
+    private  Font fuente;
 
     private ETPuntuacion(){
         super(String.valueOf(puntuacion));
-        setFont(new Font("Roboto", 40));
-        setFill(Color.RED);
+        fuente = Font.loadFont("file:src/recursos/Farmshow.ttf", 50);
+        setFont(fuente);
+        setFill(Color.BLACK);
     }
 
     public static void subirPuntuacion(int cantidad){

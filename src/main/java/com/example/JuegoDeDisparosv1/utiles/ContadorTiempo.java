@@ -11,10 +11,13 @@ public class ContadorTiempo{
     private static Label etiqueta;
     private static Timeline tl;
     private static ContadorTiempo contadorTiempo = new ContadorTiempo();
+    private Font    fuente;
+
 
     private ContadorTiempo(){
+        fuente = Font.loadFont("file:src/recursos/Farmshow.ttf", 40);
         etiqueta = new Label();
-        etiqueta.setFont(new Font("Roboto", 30));
+        etiqueta.setFont(fuente);
         actEtiqueta();
 
         tl = new Timeline(new KeyFrame(Duration.seconds(1),e-> {

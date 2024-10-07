@@ -5,6 +5,7 @@ public class Puntuacion {
     private int puntos;
     private String tiempo;
 
+
     public Puntuacion(Integer puntos, String tiempo) {
         this.puntos = puntos;
         this.tiempo = tiempo;
